@@ -35,8 +35,9 @@ const config = {
 		// 	]
 		// },
 		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/monoco-demo' : '',
 			// 404 pages need absolute reference to assets
-			assets: process.argv.includes('dev') ? '' : 'https://monokai.github.io/monoco-demo'
+			// assets: process.argv.includes('dev') ? '' : 'https://monokai.github.io/monoco-demo'
 		},
 	}
 };
