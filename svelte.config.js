@@ -36,7 +36,7 @@ const config = {
 		// },
 		paths: {
 			// 404 pages need absolute reference to assets
-			// assets: process.argv.includes('dev') ? '' : 'https://monokai.com'
+			assets: process.argv.includes('dev') ? '' : 'https://monokai.github.io/monoco-demo'
 		},
 	}
 };
