@@ -28,8 +28,8 @@
 	})
 
 	let rect = $derived({
-		width: containerRect.width * width,
-		height: containerRect.height * height
+		width: Math.round(containerRect.width * width),
+		height: Math.round(containerRect.height * height)
 	});
 
 	function onResize(r) {

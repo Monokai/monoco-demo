@@ -30,6 +30,6 @@
 		"vite": "^6.0.3"
 	},
 	"dependencies": {
-		"@monokai/monoco-svelte": "^0.0.9"
+		"@monokai/monoco-svelte": "^0.0.10"
 	}
 }
