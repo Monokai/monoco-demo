@@ -18,7 +18,7 @@ export function getCornerRadii({
 	const [ot, or, ob, ol] = offsets;
 	const w = width - ol - or;
 	const h = height - ot - ob;
-	const minSize = Math.min(width, height) * 0.5
+	const minSize = Math.min(w, h) * 0.5
 	const radii = (Array.isArray(radiusOrArray) ? radiusOrArray : [radiusOrArray, radiusOrArray, radiusOrArray, radiusOrArray]).map((r, i) => Math.min(Math.max(0, r - offsets[i]), minSize));
 
 	return [
