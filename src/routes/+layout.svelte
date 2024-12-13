@@ -6,6 +6,11 @@
 		children
 	} = $props();
 
+	const year1 = '2024';
+	const year2 = `${new Date().getFullYear()}`;
+
+	let years = (year1 === year2) ? year1 : `${year1} – ${year2}`;
+
 	$effect(() => {
 		const style = window.getComputedStyle(document.documentElement);
 
@@ -18,7 +23,7 @@
 	<main>
 		{@render children()}
 	</main>
-	<footer>© <span class="copyright"></span> <a href="https://monokai.com">Monokai</a></footer>
+	<footer>© {years} <a href="https://monokai.com">Monokai</a></footer>
 </div>
 
 <style lang="scss">

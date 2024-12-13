@@ -7,13 +7,13 @@
 	<h2>Smooth squircle corners for HTML elements</h2>
 </div>
 <div class="content">
-	<p>Monoco is a tiny JavaScript library that add squircles (smooth corners) and other corner types to html elements.</p>
+	<p>Monoco is a tiny JavaScript library that adds squircles (smooth corners) and other corner types to html elements.</p>
 </div>
 <div class="app">
 	<App />
 </div>
 <div class="content">
-	<p>Monoco works by generating dynamic SVG code based on parameters of your choosing and setting that as a background image or a clip path.</p>
+	<p>Monoco works by generating dynamic SVG code based on parameters of your choosing and setting that as a CSS background image or clip path. As such, it's compatible with all modern browsers.</p>
 	<p>Monoco keeps track of element dimensions and makes sure it redraws the corners when they change.</p>
 	<p>It's available in the following contexts:</p>
 	<ul>
