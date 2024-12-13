@@ -19,6 +19,12 @@
 	})
 </script>
 
+<svelte:head>
+	<title>Monoco — smooth squircle corners for HTML elements</title>
+	<meta name="description" content="Monoco is a tiny JavaScript library that adds squircles (smooth corners) and other corner types to html elements.">
+	<meta name="author" content="Monokai">
+</svelte:head>
+
 <div class="container">
 	<main>
 		{@render children()}
