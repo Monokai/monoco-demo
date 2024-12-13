@@ -1,11 +1,13 @@
 @use '@styles/variables' as *;
+@use '@styles/fonts' as *;
 
 :root {
-	--color-background: #ddd;
-	--color-panel: #eee;
-	--color-text: #222;
-	--color-dim: #888;
-	--color-focus: #f24;
+	--color-background: #f1ebe7;
+	--color-panel: #e4ded9;
+	--color-line: #d7cec7;
+	--color-text: #161517;
+	--color-dim: #beb7b2;
+	--color-focus: color(display-p3 1 0.35 0.41);
 	--line-height: 1.5
 }
 
@@ -15,8 +17,8 @@ html {
 	height: 100%;
 	background: $color-background;
 	color: $color-text;
-	font-family: monospace;
-	font-size: clamp(12px, 1.5vw, 18px);
+	font-family: Geologica, sans;
+	font-size: clamp(14px, 1.5vw, 20px);
 	font-variation-settings: "wght" 400;
 	line-height: $line-height;
 	letter-spacing: -0.04em;
@@ -24,7 +26,7 @@ html {
 
 body {
 	margin: 0;
-	padding: 0;
+	padding: 5vw;
 }
 
 * {
@@ -48,7 +50,7 @@ a:hover {
 }
 
 h1 {
-	font-size: 3.5rem;
+	font-size: 7rem;
 	text-align: center;
 	margin-bottom: calc(1rem * $line-height);
 }
@@ -57,7 +59,7 @@ h2 {
 	font-size: 1rem;
 	text-transform: uppercase;
 	font-variation-settings: "wght" 300;
-	letter-spacing: 0.4em;
+	letter-spacing: 0.3em;
 	text-align: center;
 	margin-bottom: calc(3rem * $line-height);
 }
@@ -67,17 +69,23 @@ h3 {
 	margin-bottom: calc(2rem * $line-height);
 }
 
-p {
+p, ul, ol {
 	margin-bottom: calc(1rem * $line-height);
 
-	&:has(+ :not(p)) {
-	margin-bottom: calc(3rem * $line-height);
-	}
+	// &:has(+ :not(p)) {
+	// 	margin-bottom: calc(3rem * $line-height);
+	// }
 
 	&:last-child {
-	margin-bottom: 0;
+		margin-bottom: 0;
 	}
 }
+
+ul, ol {
+	// list-style-type: ' ';
+	// padding: 2ch;
+}
+
 
 // .squircle {
 // 	&::before {
@@ -87,3 +95,7 @@ p {
 // 		content: '';
 // 	}
 // }
+
+strong {
+	font-variation-settings: "wght" 700;
+}

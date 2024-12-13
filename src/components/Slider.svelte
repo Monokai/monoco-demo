@@ -1,5 +1,6 @@
 <script>
 	import lerp from '@utils/lerp';
+	import { monoco } from '@monokai/monoco-svelte';
 
 	let {
 		value = $bindable(0),
@@ -45,10 +46,13 @@
 >
 	<div class="label">{label}</div>
 	<div class="slider">
-		<input type="range" min="0" max="1" bind:value={sliderValue} step={step} disabled={!enabled}>
+		<input type="range" min="0" max="1" bind:value={sliderValue} step={step} disabled={!enabled} />
 	</div>
 	<div class="value">
-		<input type="text" value={presentationValue} onchange={onChange} disabled={!enabled} />
+		<input type="text" value={presentationValue} onchange={onChange} disabled={!enabled} use:monoco={{
+			radius: 8,
+			clip: true
+		}} />
 	</div>
 </div>
 
@@ -88,11 +92,12 @@
 	.value {
 		input {
 			width: 5ch;
-			padding: 0.125rem 0;
+			padding: 0.125rem 0.25rem;
 			border: none;
 			appearance: none;
 			font-size: inherit;
 			color: inherit;
+			background: $color-background;
 		}
 	}
 

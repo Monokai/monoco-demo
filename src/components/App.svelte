@@ -4,12 +4,13 @@
 	import { getControlPoints, getCornerRadii} from '@utils/PathUtils';
 	import Controls from '@components/Controls.svelte';
 	import dimensions from '@utils/dimensions';
+	import { colorText } from '@scripts/core/Store';
 
 	let controls = $state(null);
 
 	let width = $state(0.75);
 	let height = $state(0.75);
-	let radius = $state(0.75);
+	let radius = $state(0.5);
 	let smoothing = $state(1);
 	let offset = $state(0);
 	let type = $state(CornerType.Squircle);
@@ -32,7 +33,7 @@
 		height: Math.round(containerRect.height * height)
 	});
 
-	function onResize(r) {
+	function onResize(r:DOMRect) {
 		const size = Math.min(r.width, r.height);
 
 		containerRect = {
@@ -44,13 +45,13 @@
 	const options = $derived({
 		background: hasBackground ? '#f24' : 'transparent',
 		border: [
-			[borderWidth1 * rect.width * 0.5, '#a24'],
-			[borderWidth2 * rect.width * 0.5, '#fff']
+			[borderWidth1 * containerRect.width * 0.5, $colorText],
+			[borderWidth2 * containerRect.width * 0.5, '#fff']
 		],
 		// width: rect.width,
 		// height: rect.height,
-		radius: radius * Math.min(rect.width, rect.height) * 0.5,
-		offset: offset * Math.min(rect.width, rect.height) * 0.5,
+		radius: radius * containerRect.width * 0.5,
+		offset: offset * containerRect.width * 0.5,
 		smoothing,
 		clip,
 		type
@@ -70,10 +71,6 @@
 
 <div class="app">
 	<div class="controls">
-		<div class="title">
-			<h1>Monoco</h1>
-			<h2>Controls</h2>
-		</div>
 		<Controls
 			bind:this={controls}
 			bind:width={width}
@@ -111,17 +108,17 @@
 
 				{#if drawStrokes}
 					<svg viewBox={`0 0 ${rect.width} ${rect.height}`}>
-						<rect x="0" y="0" width={rect.width} height={rect.height} fill="none" stroke="black" stroke-width="1.5" />
+						<rect x="0" y="0" width={rect.width} height={rect.height} fill="none" stroke="#fff" stroke-width="2" />
 
 						{#if cornerRadii}
 							{#each cornerRadii as [x, y, r]}
-								<circle cx={x} cy={y} r={r} fill="none" stroke="black" stroke-width="1.5" />
+								<circle cx={x} cy={y} r={r} fill="none" stroke="#fff" stroke-width="2" />
 							{/each}
 						{/if}
 
 						{#if controlPoints}
 							{#each controlPoints as [x, y]}
-								<circle cx={x} cy={y} r="3" fill="black" />
+								<circle cx={x} cy={y} r="4" fill="#fff" />
 							{/each}
 						{/if}
 					</svg>
@@ -137,25 +134,28 @@
 
 	.app {
 		display: flex;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
+		align-items: center;
+		// width: 100%;
+		// height: 100%;
+		// overflow: hidden;
+		max-width: $container-width;
+		margin: 0 auto;	
 
 		@media (max-width: $breakpoint-xs) {
 			flex-direction: column;
-		}
-	}
 
-	.title {
-		h1, h2 {
-			margin: 0 0 0.5rem 0;
-		}
+			.controls {
+				width: 100%;
+			}
 
-		margin-bottom: 1.5rem;
+			.content {
+				width: 100%;
+			}
+		}
 	}
 
 	.controls {
-		padding: 1rem;
+		// padding: 1rem;
 		// width: 24rem;
 	}
 
@@ -173,7 +173,8 @@
 		position: relative;
 		// background: #f00;
 		width: 100%;
-		height: 100%;
+		aspect-ratio: 1 / 1;
+		// height: 100%;
 		display: flex;
 		// flex-grow: 0;
 		justify-content: center;
@@ -197,11 +198,11 @@
 		inset: 0;
 
 		&.filter {
-			filter: drop-shadow(0 0.5rem 1rem #000);
+			filter: drop-shadow(0 0.5rem 1rem $color-text);
 		}
 
 		&.background {
-			background: #888;
+			background: $color-panel;
 		}
 	}
 
@@ -209,5 +210,6 @@
 		position: absolute;
 		inset: 0;
 		overflow: visible;
+		mix-blend-mode: exclusion;
 	}
 </style>

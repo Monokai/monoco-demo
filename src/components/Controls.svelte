@@ -3,6 +3,7 @@
 	import Options from '@components/Options.svelte';
 	import { CornerType } from '@monokai/monoco';
 	import { monoco } from '@monokai/monoco-svelte';
+	import { colorLine } from '@scripts/core/Store';
 
 	let {
 		width = $bindable(1),
@@ -23,6 +24,7 @@
 
 <div class="container" use:monoco={{
 	radius: 32,
+	border: [2, $colorLine],
 	clip: true
 }}>
 	<Options bind:value={type} label="type" options={Object.values(CornerType)} optionLabels={Object.values(CornerType)} />
@@ -47,5 +49,6 @@
 		background-color: $color-panel;
 		min-width: 48ch;
 		padding: 1rem;
+		font-family: monospace;
 	}
 </style>

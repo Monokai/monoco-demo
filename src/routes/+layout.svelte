@@ -1,9 +1,17 @@
 <script>
 	import '@styles/global.scss';
+	import { colorLine, colorText } from '@scripts/core/Store'
 
 	let {
 		children
 	} = $props();
+
+	$effect(() => {
+		const style = window.getComputedStyle(document.documentElement);
+
+		$colorLine = style.getPropertyValue('--color-line');
+		$colorText = style.getPropertyValue('--color-text');
+	})
 </script>
 
 <div class="container">
@@ -17,15 +25,16 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		height: 100vh;
+		// justify-content: space-between;
+		// height: 100vh;
 	}
 
 	main {
 		flex: 1;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
 	}
 
 	footer {
