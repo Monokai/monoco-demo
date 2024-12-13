@@ -1,0 +1,149 @@
+@font-face {
+	font-family: "monokai-icons";
+	src: url("../fonts/monokai-icons.woff2?t=1734081042913") format("woff2"),
+		url("../fonts/monokai-icons.woff?t=1734081042913") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	&:before {
+		font-family: 'monokai-icons';
+		font-style: normal;
+		speak: never;
+		// line-height: 1;
+	}
+}
+
+.icon-arrow-end:before { content: "\ea01"; }
+.icon-arrow-left:before { content: "\ea02"; }
+.icon-arrow-right:before { content: "\ea03"; }
+.icon-arrow-small-right:before { content: "\ea04"; }
+.icon-arrow-start:before { content: "\ea05"; }
+.icon-astro:before { content: "\ea06"; }
+.icon-bullet:before { content: "\ea07"; }
+.icon-cancel:before { content: "\ea08"; }
+.icon-clock:before { content: "\ea09"; }
+.icon-confirm:before { content: "\ea0a"; }
+.icon-copy:before { content: "\ea0b"; }
+.icon-copyright:before { content: "\ea0c"; }
+.icon-delete:before { content: "\ea0d"; }
+.icon-docker:before { content: "\ea0e"; }
+.icon-download:before { content: "\ea0f"; }
+.icon-edit:before { content: "\ea10"; }
+.icon-elixir:before { content: "\ea11"; }
+.icon-email:before { content: "\ea12"; }
+.icon-env:before { content: "\ea13"; }
+.icon-extension:before { content: "\ea14"; }
+.icon-farcaster:before { content: "\ea15"; }
+.icon-filter:before { content: "\ea16"; }
+.icon-flickr:before { content: "\ea17"; }
+.icon-happy:before { content: "\ea18"; }
+.icon-heart:before { content: "\ea19"; }
+.icon-help:before { content: "\ea1a"; }
+.icon-hidden:before { content: "\ea1b"; }
+.icon-instagram:before { content: "\ea1c"; }
+.icon-link-back:before { content: "\ea1d"; }
+.icon-link:before { content: "\ea1e"; }
+.icon-linkedin:before { content: "\ea1f"; }
+.icon-lock:before { content: "\ea20"; }
+.icon-logo-apple:before { content: "\ea21"; }
+.icon-logo-google:before { content: "\ea22"; }
+.icon-logo-meta:before { content: "\ea23"; }
+.icon-logo-microsoft:before { content: "\ea24"; }
+.icon-logo-netflix:before { content: "\ea25"; }
+.icon-logo-openai:before { content: "\ea26"; }
+.icon-menu:before { content: "\ea27"; }
+.icon-monokai-invert:before { content: "\ea28"; }
+.icon-monokai-pro-invert:before { content: "\ea29"; }
+.icon-monokai-pro:before { content: "\ea2a"; }
+.icon-monokai:before { content: "\ea2b"; }
+.icon-moon:before { content: "\ea2c"; }
+.icon-nginx:before { content: "\ea2d"; }
+.icon-nodejs:before { content: "\ea2e"; }
+.icon-paper-plane:before { content: "\ea2f"; }
+.icon-php:before { content: "\ea30"; }
+.icon-plus:before { content: "\ea31"; }
+.icon-react:before { content: "\ea32"; }
+.icon-rollup:before { content: "\ea33"; }
+.icon-ruby:before { content: "\ea34"; }
+.icon-rust:before { content: "\ea35"; }
+.icon-scroll-down:before { content: "\ea36"; }
+.icon-share:before { content: "\ea37"; }
+.icon-social-media:before { content: "\ea38"; }
+.icon-star:before { content: "\ea39"; }
+.icon-sun:before { content: "\ea3a"; }
+.icon-svelte:before { content: "\ea3b"; }
+.icon-unique:before { content: "\ea3c"; }
+.icon-visible:before { content: "\ea3d"; }
+.icon-vue:before { content: "\ea3e"; }
+.icon-warpcast:before { content: "\ea3f"; }
+.icon-x:before { content: "\ea40"; }
+.icon-yarn:before { content: "\ea41"; }
+
+$icon-arrow-end: "\ea01";
+$icon-arrow-left: "\ea02";
+$icon-arrow-right: "\ea03";
+$icon-arrow-small-right: "\ea04";
+$icon-arrow-start: "\ea05";
+$icon-astro: "\ea06";
+$icon-bullet: "\ea07";
+$icon-cancel: "\ea08";
+$icon-clock: "\ea09";
+$icon-confirm: "\ea0a";
+$icon-copy: "\ea0b";
+$icon-copyright: "\ea0c";
+$icon-delete: "\ea0d";
+$icon-docker: "\ea0e";
+$icon-download: "\ea0f";
+$icon-edit: "\ea10";
+$icon-elixir: "\ea11";
+$icon-email: "\ea12";
+$icon-env: "\ea13";
+$icon-extension: "\ea14";
+$icon-farcaster: "\ea15";
+$icon-filter: "\ea16";
+$icon-flickr: "\ea17";
+$icon-happy: "\ea18";
+$icon-heart: "\ea19";
+$icon-help: "\ea1a";
+$icon-hidden: "\ea1b";
+$icon-instagram: "\ea1c";
+$icon-link-back: "\ea1d";
+$icon-link: "\ea1e";
+$icon-linkedin: "\ea1f";
+$icon-lock: "\ea20";
+$icon-logo-apple: "\ea21";
+$icon-logo-google: "\ea22";
+$icon-logo-meta: "\ea23";
+$icon-logo-microsoft: "\ea24";
+$icon-logo-netflix: "\ea25";
+$icon-logo-openai: "\ea26";
+$icon-menu: "\ea27";
+$icon-monokai-invert: "\ea28";
+$icon-monokai-pro-invert: "\ea29";
+$icon-monokai-pro: "\ea2a";
+$icon-monokai: "\ea2b";
+$icon-moon: "\ea2c";
+$icon-nginx: "\ea2d";
+$icon-nodejs: "\ea2e";
+$icon-paper-plane: "\ea2f";
+$icon-php: "\ea30";
+$icon-plus: "\ea31";
+$icon-react: "\ea32";
+$icon-rollup: "\ea33";
+$icon-ruby: "\ea34";
+$icon-rust: "\ea35";
+$icon-scroll-down: "\ea36";
+$icon-share: "\ea37";
+$icon-social-media: "\ea38";
+$icon-star: "\ea39";
+$icon-sun: "\ea3a";
+$icon-svelte: "\ea3b";
+$icon-unique: "\ea3c";
+$icon-visible: "\ea3d";
+$icon-vue: "\ea3e";
+$icon-warpcast: "\ea3f";
+$icon-x: "\ea40";
+$icon-yarn: "\ea41";
+

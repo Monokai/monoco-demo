@@ -6,7 +6,7 @@ export default function dimensions(node: HTMLElement, callbackOrObject: (rect: D
 }) {
 	const {
 		callback,
-		debounce:debounceSeconds = 0.25
+		debounce:debounceSeconds = 0
 	} = callbackOrObject instanceof Function ? { callback: callbackOrObject } : callbackOrObject;
 
 	const debouncedResize = (() => {

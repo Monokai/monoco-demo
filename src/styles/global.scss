@@ -1,5 +1,6 @@
 @use '@styles/variables' as *;
 @use '@styles/fonts' as *;
+@use '@styles/monokai-icons' as *;
 
 :root {
 	--color-background: #f1ebe7;
@@ -53,6 +54,12 @@ h1 {
 	font-size: 7rem;
 	text-align: center;
 	margin-bottom: calc(1rem * $line-height);
+
+	// font-size: clamp(64px, 4vw, 512px);
+
+	@media (max-width: $breakpoint-xs) {
+		font-size: 4rem;
+	}
 }
 
 h2 {
@@ -98,4 +105,8 @@ ul, ol {
 
 strong {
 	font-variation-settings: "wght" 700;
+}
+
+.icon {
+	font-weight: normal !important;
 }
