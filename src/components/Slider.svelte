@@ -63,7 +63,7 @@
 		width: 100%;
 		padding: 0.5rem;
 		display: grid;
-		grid-template-columns: 10ch 1fr 4ch;
+		grid-template-columns: 8ch 1fr 4ch;
 		font-size: 0.75rem;
 		justify-content: center;
 		align-items: center;

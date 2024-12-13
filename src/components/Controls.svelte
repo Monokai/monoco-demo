@@ -47,7 +47,7 @@
 
 	.container {
 		background-color: $color-panel;
-		min-width: 48ch;
+		min-width: 36ch;
 		padding: 1rem;
 		font-family: monospace;
 	}

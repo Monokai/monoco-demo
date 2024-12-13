@@ -34,7 +34,7 @@
 		width: 100%;
 		padding: 0.5rem;
 		display: grid;
-		grid-template-columns: 10ch 1fr 12ch;
+		grid-template-columns: 8ch 1fr 12ch;
 		font-size: 0.75rem;
 		justify-content: center;
 		align-items: center;
@@ -48,7 +48,7 @@
 
 	.options {
 		flex: 1;
-		margin: 0 0.75rem;
+		margin: 0 0.5rem;
 		display: flex;
 	}
 
@@ -65,7 +65,7 @@
 	}
 
 	.option {
-		padding: 0rem 0.5rem;
+		padding: 0rem 0.35rem;
 	}
 
 	.value {
